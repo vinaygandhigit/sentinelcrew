@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SentinelCrew analyst console</title>
+    <style>
+      /* Tokens: a cool "incident room" palette - fog paper, navy ink, and three
+     signal colours that only ever mean one thing each. */
+      :root {
+        color-scheme: light;
+        --fog: #eef1f4;
+        --paper: #ffffff;
+        --ink: #1c2430;
+        --ink-soft: #586577;
+        --rule: #cbd3dc;
+        --threat: #b3261e; /* malicious / true positive */
+        --benign: #1f7a6d; /* false positive / noise / refuted challenge */
+        --hold: #b7790a; /* waiting on a human */
+        --focus: #2f5da8;
+        --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+        --mono: "IBM Plex Mono", "Cascadia Mono", Consolas, monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        background: var(--fog);
+        color: var(--ink);
+        font: 15px/1.5 var(--sans);
+      }
+      button {
+        font: inherit;
+        cursor: pointer;
+      }
+      :focus-visible {
+        outline: 2px solid var(--focus);
+        outline-offset: 2px;
+      }
+
+      .shell {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr) minmax(0, 1.15fr);
+        height: 100vh;
+      }
+      .rail {
+        border-right: 1px solid var(--rule);
+        padding: 20px 18px;
+        overflow-y: auto;
+      }
+      .stream {
+        border-right: 1px solid var(--rule);
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+      .file {
+        overflow-y: auto;
+        padding: 24px 28px 48px;
+        background: var(--paper);
+      }
+
+      .brand {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin: 0 0 2px;
+      }
+      .brand-sub {
+        color: var(--ink-soft);
+        font-size: 13px;
+        margin: 0 0 22px;
+      }
+      .rail h2 {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink-soft);
+        margin: 22px 0 8px;
+      }
+
+      .scenario {
+        display: block;
+        width: 100%;
+        text-align: left;
+        background: var(--paper);
+        border: 1px solid var(--rule);
+        border-radius: 6px;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        color: var(--ink);
+      }
+      .scenario:hover {
+        border-color: var(--ink-soft);
+      }
+      .scenario strong {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .scenario span {
+        display: block;
+        font-size: 12.5px;
+        color: var(--ink-soft);
+        line-height: 1.4;
+      }
+      .scenario:disabled {
+        opacity: 0.55;
+        cursor: progress;
+      }
+
+      .case-row {
+        display: grid;
+        grid-template-columns: 8px 1fr auto;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        background: none;
+        border: 0;
+        border-radius: 4px;
+        padding: 7px 6px;
+        text-align: left;
+        color: var(--ink);
+      }
+      .case-row:hover,
+      .case-row[aria-current="true"] {
+        background: #e2e7ed;
+      }
+      .case-row .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      .case-row .t {
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .case-row .c {
+        font-size: 12px;
+        color: var(--ink-soft);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 14px;
+        font-size: 13px;
+      }
+      .stats div b {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        font-variant-numeric: tabular-nums;
+      }
+      .stats div {
+        color: var(--ink-soft);
+      }
+      .stats b {
+        color: var(--ink);
+      }
+
+      .stream-head {
+        padding: 20px 22px 12px;
+        border-bottom: 1px solid var(--rule);
+      }
+      .stream-head h1 {
+        font-size: 17px;
+        font-weight: 600;
+        margin: 0;
+      }
+      .stream-head p {
+        margin: 2px 0 0;
+        color: var(--ink-soft);
+        font-size: 13px;
+      }
+      .msgs {
+        flex: 1;
+        overflow-y: auto;
+        padding: 8px 22px 28px;
+      }
+      .msg {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 12px;
+        padding: 7px 0;
+        border-bottom: 1px solid #e3e8ee;
+      }
+      .msg .who {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink-soft);
+      }
+      .msg .what {
+        font-size: 14px;
+      }
+      .msg.k-challenge .what {
+        padding-left: 10px;
+        border-left: 3px solid var(--rule);
+      }
+      .msg.k-challenge.upheld .what {
+        border-left-color: var(--benign);
+      }
+      .msg.k-challenge.refuted .what {
+        border-left-color: var(--threat);
+      }
+      .msg.k-decision .what {
+        font-weight: 600;
+      }
+      .msg.k-error .what {
+        color: var(--hold);
+      }
+      .msg.k-thought .what {
+        color: var(--ink-soft);
+      }
+      .msg.fresh {
+        animation: arrive 0.45s ease-out;
+      }
+      @keyframes arrive {
+        from {
+          background: #fff6dd;
+        }
+        to {
+          background: transparent;
+        }
+      }
+      .empty {
+        color: var(--ink-soft);
+        padding: 40px 0;
+        max-width: 46ch;
+      }
+
+      /* ---- case file ---- */
+      .file h2 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 32px 0 10px;
+      }
+      .verdict {
+        font-size: 30px;
+        line-height: 1.15;
+        font-weight: 600;
+        letter-spacing: -0.015em;
+        margin: 4px 0 6px;
+      }
+      .verdict.v-true_positive {
+        color: var(--threat);
+      }
+      .verdict.v-false_positive,
+      .verdict.v-noise {
+        color: var(--benign);
+      }
+      .verdict.v-needs_review {
+        color: var(--hold);
+      }
+      .meta {
+        color: var(--ink-soft);
+        font-size: 13.5px;
+        margin: 0;
+      }
+
+      /* The one bold element: the confidence trace. A single track shows where
+     the team started, every challenge the Critic raised, and where it ended. */
+      .trace {
+        position: relative;
+        height: 92px;
+        margin: 26px 0 6px;
+      }
+      .trace .track {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 40px;
+        height: 12px;
+        border-radius: 6px;
+        background: linear-gradient(
+          90deg,
+          #d7ece8 0 40%,
+          #f5ebd3 40% 70%,
+          #f4dad7 70% 100%
+        );
+      }
+      .trace .zone {
+        position: absolute;
+        top: 60px;
+        font-size: 12px;
+        color: var(--ink-soft);
+      }
+      .trace .mark {
+        position: absolute;
+        top: 30px;
+        width: 2px;
+        height: 32px;
+        background: var(--ink-soft);
+        transform: translateX(-1px);
+      }
+      .trace .mark.final {
+        width: 4px;
+        background: var(--ink);
+        top: 24px;
+        height: 44px;
+        transform: translateX(-2px);
+      }
+      .trace .lbl {
+        position: absolute;
+        top: 0;
+        font-size: 12.5px;
+        white-space: nowrap;
+        transform: translateX(-50%);
+        font-variant-numeric: tabular-nums;
+      }
+      .trace .lbl.final {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .trace .arrow {
+        position: absolute;
+        top: 45px;
+        height: 2px;
+        background: var(--ink);
+      }
+      .trace-caption {
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin: 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13.5px;
+      }
+      th {
+        text-align: left;
+        font-weight: 600;
+        color: var(--ink-soft);
+        font-size: 12.5px;
+        padding: 6px 8px 6px 0;
+        border-bottom: 1px solid var(--rule);
+      }
+      td {
+        padding: 7px 8px 7px 0;
+        border-bottom: 1px solid #e8ecf1;
+        vertical-align: top;
+      }
+      td.num {
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+      .pill {
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        background: #e6eaef;
+      }
+      .pill.upheld,
+      .pill.executed,
+      .pill.approved {
+        background: #dcefeb;
+        color: var(--benign);
+      }
+      .pill.refuted,
+      .pill.blocked,
+      .pill.rejected {
+        background: #f6e0de;
+        color: var(--threat);
+      }
+      .pill.pending_approval {
+        background: #f7ebcf;
+        color: #8a5a00;
+      }
+      .acts {
+        display: flex;
+        gap: 6px;
+        margin-top: 6px;
+      }
+      .btn {
+        border: 1px solid var(--ink);
+        background: var(--ink);
+        color: #fff;
+        border-radius: 4px;
+        padding: 4px 12px;
+        font-size: 13px;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--ink);
+      }
+      .hold-banner {
+        border-left: 4px solid var(--hold);
+        background: #fbf4e3;
+        padding: 10px 14px;
+        margin: 18px 0 0;
+        font-size: 14px;
+      }
+
+      .report {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 76ch;
+      }
+      .report pre {
+        font: 12px/1.5 var(--mono);
+        background: var(--fog);
+        padding: 10px;
+        overflow-x: auto;
+      }
+      .report h1 {
+        font-size: 18px;
+      }
+      .report h2 {
+        font-size: 15px;
+        margin-top: 22px;
+      }
+      .report h3 {
+        font-size: 14px;
+      }
+      details summary {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 15px;
+        margin-top: 32px;
+      }
+      .comp {
+        display: grid;
+        grid-template-columns: 90px 1fr 44px;
+        gap: 8px;
+        align-items: center;
+        font-size: 13px;
+        margin: 4px 0;
+      }
+      .comp .bar {
+        height: 6px;
+        background: #e3e8ee;
+        border-radius: 3px;
+        overflow: hidden;
+      }
+      .comp .bar i {
+        display: block;
+        height: 100%;
+        background: var(--ink-soft);
+      }
+
+      @media (max-width: 1100px) {
+        .shell {
+          grid-template-columns: 1fr;
+          height: auto;
+        }
+        .rail,
+        .stream {
+          border-right: 0;
+          border-bottom: 1px solid var(--rule);
+        }
+        .msgs {
+          max-height: 60vh;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .msg.fresh {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="rail">
+        <p class="brand">SentinelCrew</p>
+        <p class="brand-sub" id="llm">Connecting...</p>
+
+        <h2 id="sc-h">Run a scenario</h2>
+        <div id="scenarios" aria-labelledby="sc-h"></div>
+
+        <h2>Today</h2>
+        <div class="stats" id="stats"></div>
+
+        <h2 id="cases-h">Cases</h2>
+        <div id="cases" aria-labelledby="cases-h"></div>
+      </aside>
+
+      <section class="stream" aria-labelledby="stream-title">
+        <div class="stream-head">
+          <h1 id="stream-title">Agent conversation</h1>
+          <p id="stream-sub">
+            Pick a scenario to watch the crew work the alert.
+          </p>
+        </div>
+        <div class="msgs" id="msgs" aria-live="polite">
+          <p class="empty">
+            Each agent posts here as it works: what it looked at, what it found,
+            and every challenge the Critic raised before anyone acted.
+          </p>
+        </div>
+      </section>
+
+      <main class="file" id="file">
+        <p class="empty">The case file opens here when the crew finishes.</p>
+      </main>
+    </div>
+
+    <script>
+      const $ = (s) => document.querySelector(s);
+      const esc = (s) =>
+        String(s ?? "").replace(
+          /[&<>"']/g,
+          (c) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[c],
+        );
+      const pct = (x) => Math.round((x ?? 0) * 100) + "%";
+      const VERDICT = {
+        true_positive: "Confirmed incident",
+        false_positive: "False positive",
+        noise: "Closed as noise",
+        needs_review: "Needs an analyst",
+      };
+      const DOT = {
+        true_positive: "var(--threat)",
+        false_positive: "var(--benign)",
+        noise: "var(--benign)",
+        needs_review: "var(--hold)",
+      };
+      let current = null;
+
+      async function api(path, opts = {}) {
+        const res = await fetch(path, {
+          headers: { "content-type": "application/json" },
+          ...opts,
+        });
+        const ct = res.headers.get("content-type") || "";
+        const body = ct.includes("json") ? await res.json() : await res.text();
+        if (!res.ok) throw new Error(body.error || res.statusText);
+        return body;
+      }
+
+      async function boot() {
+        const h = await api("/api/health");
+        $("#llm").textContent =
+          h.llm.startsWith("offline") || h.llm.startsWith("LLM disabled")
+            ? "Reasoning: deterministic (no LLM key)"
+            : "Reasoning: " + h.llm;
+        const sc = await api("/api/scenarios");
+        $("#scenarios").innerHTML = sc
+          .map(
+            (s) =>
+              `<button class="scenario" data-id="${esc(s.id)}"><strong>${esc(s.title)}</strong><span>${esc(s.description)}</span></button>`,
+          )
+          .join("");
+        document
+          .querySelectorAll(".scenario")
+          .forEach((b) => b.addEventListener("click", () => runScenario(b)));
+        refreshSide();
+      }
+
+      async function refreshSide() {
+        const [m, cases] = await Promise.all([
+          api("/api/metrics"),
+          api("/api/cases"),
+        ]);
+        $("#stats").innerHTML = `
+    <div><b>${m.total_cases}</b>cases worked</div>
+    <div><b>${pct(m.auto_close_rate)}</b>closed without a human</div>
+    <div><b>${m.mean_time_to_triage_ms} ms</b>mean time to verdict</div>
+    <div><b>${m.pending_approvals}</b>actions waiting on you</div>`;
+        $("#cases").innerHTML = cases.length
+          ? cases
+              .map(
+                (c) => `
+    <button class="case-row" data-id="${esc(c.case_id)}" aria-current="${c.case_id === current}">
+      <span class="dot" style="background:${DOT[c.verdict]}"></span>
+      <span class="t" title="${esc(c.title)}">${esc(c.case_id)} ${esc(c.title)}</span>
+      <span class="c">${pct(c.confidence)}</span>
+    </button>`,
+              )
+              .join("")
+          : `<p class="meta">No cases yet.</p>`;
+        document
+          .querySelectorAll(".case-row")
+          .forEach((b) =>
+            b.addEventListener("click", () => openCase(b.dataset.id, true)),
+          );
+      }
+
+      function renderMsg(m, fresh) {
+        const status = m.data && m.data.status ? m.data.status : "";
+        return `<div class="msg k-${esc(m.kind)} ${esc(status)} ${fresh ? "fresh" : ""}">
+    <div class="who">${esc(m.agent)}</div><div class="what">${esc(m.content)}</div></div>`;
+      }
+
+      async function runScenario(btn) {
+        document
+          .querySelectorAll(".scenario")
+          .forEach((b) => (b.disabled = true));
+        $("#stream-title").textContent =
+          btn.querySelector("strong").textContent;
+        $("#stream-sub").textContent = "The crew is working this alert.";
+        $("#msgs").innerHTML = "";
+        $("#file").innerHTML =
+          `<p class="empty">Waiting for the crew to finish.</p>`;
+        try {
+          const { run_id } = await api(`/api/scenarios/${btn.dataset.id}/run`, {
+            method: "POST",
+          });
+          let since = 0;
+          for (;;) {
+            const r = await api(`/api/runs/${run_id}?since=${since}`);
+            for (const m of r.messages) {
+              $("#msgs").insertAdjacentHTML("beforeend", renderMsg(m, true));
+              await new Promise((ok) => setTimeout(ok, 140)); // paced so a viewer can follow the debate
+              $("#msgs").scrollTop = $("#msgs").scrollHeight;
+            }
+            since = r.next;
+            if (r.done) {
+              if (r.error) throw new Error(r.error);
+              $("#stream-sub").textContent = `Finished as ${r.case_id}.`;
+              await openCase(r.case_id, false);
+              break;
+            }
+            await new Promise((ok) => setTimeout(ok, 300));
+          }
+        } catch (e) {
+          $("#stream-sub").textContent =
+            "The run stopped: " +
+            e.message +
+            ". Check the server log, then run it again.";
+        } finally {
+          document
+            .querySelectorAll(".scenario")
+            .forEach((b) => (b.disabled = false));
+          refreshSide();
+        }
+      }
+
+      function confidenceTrace(c) {
+        const start = c.initial_assessment
+          ? c.initial_assessment.confidence
+          : c.confidence;
+        const end = c.confidence;
+        const rounds = c.debate || [];
+        const marks = rounds
+          .map(
+            (r, i) =>
+              `<span class="mark" style="left:${r.confidence_after * 100}%" title="After round ${r.round}"></span>`,
+          )
+          .join("");
+        const lo = Math.min(start, end),
+          hi = Math.max(start, end);
+        const close = Math.abs(end - start) < 0.08;
+        return `
+    <div class="trace" role="img" aria-label="Confidence moved from ${pct(start)} to ${pct(end)} across ${rounds.length} debate rounds">
+      <div class="track"></div>
+      <span class="zone" style="left:0">Benign</span>
+      <span class="zone" style="left:41%">Review</span>
+      <span class="zone" style="left:71%">Malicious</span>
+      <span class="arrow" style="left:${lo * 100}%; width:${(hi - lo) * 100}%"></span>
+      <span class="mark" style="left:${start * 100}%"></span>
+      ${marks}
+      <span class="mark final" style="left:${end * 100}%"></span>
+      ${close ? "" : `<span class="lbl" style="left:${start * 100}%">Before debate ${pct(start)}</span>`}
+      <span class="lbl final" style="left:${Math.min(Math.max(end * 100, 8), 92)}%">After ${pct(end)}</span>
+    </div>
+    <p class="trace-caption">${
+      rounds.length
+        ? `The Critic ran ${rounds.length} round${rounds.length > 1 ? "s" : ""} of challenges and moved confidence ${end >= start ? "up" : "down"} by ${Math.abs(Math.round((end - start) * 100))} points.`
+        : "Closed at triage, so the Critic was not needed."
+    }</p>`;
+      }
+
+      function mdToHtml(md) {
+        const lines = md.split("\n");
+        let out = "",
+          inCode = false,
+          inTable = false,
+          inList = false;
+        const inline = (s) =>
+          esc(s)
+            .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+            .replace(/`(.+?)`/g, "<code>$1</code>")
+            .replace(/&amp;nbsp;/g, " ");
+        const close = () => {
+          if (inTable) {
+            out += "</table>";
+            inTable = false;
+          }
+          if (inList) {
+            out += "</ul>";
+            inList = false;
+          }
+        };
+        for (const l of lines) {
+          if (l.startsWith("```")) {
+            close();
+            out += inCode ? "</pre>" : "<pre>";
+            inCode = !inCode;
+            continue;
+          }
+          if (inCode) {
+            out += esc(l) + "\n";
+            continue;
+          }
+          if (/^\|[-| ]+\|$/.test(l)) continue;
+          if (l.startsWith("|")) {
+            if (!inTable) {
+              close();
+              out += "<table>";
+              inTable = true;
+            }
+            out +=
+              "<tr>" +
+              l
+                .slice(1, -1)
+                .split(/(?<!\\)\|/)
+                .map(
+                  (c) => `<td>${inline(c.trim().replace(/\\\|/g, "|"))}</td>`,
+                )
+                .join("") +
+              "</tr>";
+            continue;
+          }
+          if (l.startsWith("- ")) {
+            if (!inList) {
+              close();
+              out += "<ul>";
+              inList = true;
+            }
+            out += `<li>${inline(l.slice(2))}</li>`;
+            continue;
+          }
+          close();
+          const h = l.match(/^(#{1,3}) (.*)/);
+          if (h) out += `<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`;
+          else if (l === "---") out += "<hr>";
+          else if (l.trim()) out += `<p>${inline(l)}</p>`;
+        }
+        close();
+        return out;
+      }
+
+      async function openCase(id, replay) {
+        current = id;
+        const c = await api(`/api/cases/${id}`);
+        if (replay) {
+          $("#stream-title").textContent = `${c.case_id} ${c.alert.rule_name}`;
+          $("#stream-sub").textContent =
+            "Replay of the agent conversation for this case.";
+          $("#msgs").innerHTML = c.messages
+            .map((m) => renderMsg(m, false))
+            .join("");
+        }
+        const pending = c.actions.filter(
+          (a) => a.status === "pending_approval",
+        );
+        const comps = c.final_assessment ? c.final_assessment.components : {};
+        const findings = c.investigation ? c.investigation.findings : [];
+        $("#file").innerHTML = `
+    <p class="meta">${esc(c.case_id)} &nbsp; ${esc(c.alert.rule_name)} &nbsp; ${esc(c.alert.source)}</p>
+    <p class="verdict v-${esc(c.verdict)}">${VERDICT[c.verdict] || esc(c.verdict)}</p>
+    <p class="meta">Priority ${esc(c.priority)}, decided in ${c.duration_ms} ms by ${c.llm_provider === "offline" ? "deterministic reasoning" : esc(c.llm_provider)}</p>
+    ${pending.length ? `<div class="hold-banner">${pending.length} high-risk action${pending.length > 1 ? "s need" : " needs"} your approval before it runs.</div>` : ""}
+    ${confidenceTrace(c)}
+
+    ${
+      c.debate.length
+        ? `<h2>What the Critic challenged</h2>
+    <table><tr><th>Challenge</th><th>Outcome</th><th>Evidence</th><th>Effect</th></tr>
+      ${c.debate
+        .flatMap((r) => r.challenges)
+        .map(
+          (ch) => `<tr><td>${esc(ch.claim)}</td>
+        <td><span class="pill ${esc(ch.status)}">${esc(ch.status)}</span></td><td>${esc(ch.evidence)}</td>
+        <td class="num">${ch.impact >= 0 ? "+" : ""}${ch.impact.toFixed(2)}</td></tr>`,
+        )
+        .join("")}
+    </table>`
+        : ""
+    }
+
+    <h2>Response actions</h2>
+    ${
+      c.actions.length
+        ? `<table><tr><th>Action</th><th>Target</th><th>Risk</th><th>Status</th></tr>
+      ${c.actions
+        .map(
+          (
+            a,
+          ) => `<tr><td>${esc(a.kind.replace(/_/g, " "))}<br><span class="meta">${esc(a.result || a.rationale)}</span>
+        ${
+          a.status === "pending_approval"
+            ? `<div class="acts">
+          <button class="btn" data-a="${esc(a.action_id)}" data-ok="1">Approve</button>
+          <button class="btn ghost" data-a="${esc(a.action_id)}" data-ok="0">Reject</button></div>`
+            : ""
+        }</td>
+        <td><code>${esc(a.target)}</code></td><td>${esc(a.risk)}</td><td><span class="pill ${esc(a.status)}">${esc(a.status.replace(/_/g, " "))}</span></td></tr>`,
+        )
+        .join("")}
+    </table>`
+        : `<p class="meta">No containment needed.</p>`
+    }
+
+    ${
+      findings.length
+        ? `<h2>Evidence</h2><table><tr><th>Weight</th><th>Finding</th><th>Detail</th></tr>
+      ${findings.map((f) => `<tr><td class="num">${f.weight.toFixed(2)}</td><td>${esc(f.title)}<br><span class="meta">${esc(f.technique_id || "")}</span></td><td>${esc(f.detail)}</td></tr>`).join("")}
+    </table>`
+        : ""
+    }
+
+    ${
+      Object.keys(comps).length
+        ? `<h2>How the score was built</h2>
+      ${["triage", "evidence", "intel", "memory"]
+        .filter((k) => k in comps)
+        .map(
+          (k) => `<div class="comp"><span>${k}</span>
+        <span class="bar"><i style="width:${comps[k] * 100}%"></i></span><span class="num">${comps[k].toFixed(2)}</span></div>`,
+        )
+        .join("")}
+      <p class="meta">Critic adjustment ${comps.adjustment >= 0 ? "+" : ""}${(comps.adjustment || 0).toFixed(2)}</p>`
+        : ""
+    }
+
+    <details><summary>Incident report</summary><div class="report">${mdToHtml(c.report_markdown)}</div>
+      <p><a href="/api/cases/${esc(c.case_id)}/report" download="${esc(c.case_id)}.md">Download report (Markdown)</a></p></details>`;
+        document
+          .querySelectorAll("[data-a]")
+          .forEach((b) =>
+            b.addEventListener("click", () =>
+              decide(c.case_id, b.dataset.a, b.dataset.ok === "1"),
+            ),
+          );
+        refreshSide();
+      }
+
+      async function decide(caseId, actionId, approve) {
+        await api(`/api/cases/${caseId}/actions/${actionId}`, {
+          method: "POST",
+          body: JSON.stringify({ approve, analyst: "soc-analyst" }),
+        });
+        await openCase(caseId, true);
+      }
+
+      boot().catch((e) => {
+        $("#llm").textContent = "Can't reach the API: " + e.message;
+      });
+    </script>
+  </body>
+</html>
