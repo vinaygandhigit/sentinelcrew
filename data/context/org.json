@@ -1,0 +1,129 @@
+{
+  "description": "Synthetic organisation context: asset inventory (CMDB), identities and the change calendar.",
+  "assets": [
+    {
+      "hostname": "WS-FIN-07",
+      "ip": "10.0.1.37",
+      "role": "workstation",
+      "owner": "Finance",
+      "criticality": "high",
+      "tags": ["finance", "pci"]
+    },
+    {
+      "hostname": "WS-HR-03",
+      "ip": "10.0.1.53",
+      "role": "workstation",
+      "owner": "HR",
+      "criticality": "medium",
+      "tags": ["hr", "pii"]
+    },
+    {
+      "hostname": "WS-ENG-12",
+      "ip": "10.0.3.12",
+      "role": "workstation",
+      "owner": "Engineering",
+      "criticality": "high",
+      "tags": ["engineering", "source-code"]
+    },
+    {
+      "hostname": "WS-SAL-21",
+      "ip": "10.0.1.81",
+      "role": "workstation",
+      "owner": "Sales",
+      "criticality": "medium",
+      "tags": ["sales"]
+    },
+    {
+      "hostname": "SRV-WEB-01",
+      "ip": "10.0.2.15",
+      "role": "server",
+      "owner": "IT",
+      "criticality": "high",
+      "tags": ["dmz", "web"]
+    },
+    {
+      "hostname": "SRV-BKP-01",
+      "ip": "10.0.2.40",
+      "role": "server",
+      "owner": "IT",
+      "criticality": "high",
+      "tags": ["backup"]
+    },
+    {
+      "hostname": "SEC-SCAN-01",
+      "ip": "10.0.5.20",
+      "role": "scanner",
+      "owner": "IT Security",
+      "criticality": "medium",
+      "tags": ["authorized-scanner", "security-tooling"]
+    },
+    {
+      "hostname": "DC01",
+      "ip": "10.0.0.10",
+      "role": "domain-controller",
+      "owner": "IT",
+      "criticality": "critical",
+      "tags": ["tier0"]
+    }
+  ],
+  "identities": [
+    {
+      "username": "j.mehta",
+      "department": "Finance",
+      "privileged": false,
+      "tags": ["finance"]
+    },
+    {
+      "username": "r.iyer",
+      "department": "Engineering",
+      "privileged": false,
+      "tags": ["developer"]
+    },
+    {
+      "username": "a.sharma",
+      "department": "HR",
+      "privileged": false,
+      "tags": []
+    },
+    {
+      "username": "k.rao",
+      "department": "Sales",
+      "privileged": false,
+      "tags": []
+    },
+    {
+      "username": "p.nair",
+      "department": "IT",
+      "privileged": true,
+      "tags": ["it-admin"]
+    },
+    {
+      "username": "svc-backup",
+      "department": "IT",
+      "privileged": true,
+      "tags": ["service-account"]
+    },
+    {
+      "username": "svc-scanner",
+      "department": "IT Security",
+      "privileged": false,
+      "tags": ["service-account"]
+    }
+  ],
+  "changes": [
+    {
+      "change_id": "CHG-2041",
+      "start": "2026-10-07T20:00:00Z",
+      "end": "2026-10-07T23:59:00Z",
+      "description": "Monthly authenticated vulnerability scan of DMZ servers by SEC-SCAN-01",
+      "assets": ["SEC-SCAN-01", "10.0.5.20", "SRV-WEB-01", "10.0.2.15"]
+    },
+    {
+      "change_id": "CHG-2038",
+      "start": "2026-10-05T01:00:00Z",
+      "end": "2026-10-05T03:00:00Z",
+      "description": "Backup appliance firmware upgrade",
+      "assets": ["SRV-BKP-01"]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "case_id": "HIST-0001",
+    "title": "Credential stuffing from Tor exit node against OWA",
+    "verdict": "true_positive",
+    "fingerprint": "Multiple failed logons followed by success brute force credential-access T1110 T1078 failed authentications brute-force pattern successful logon after repeated failures tor-exit external source Brute-force authentication Account compromise",
+    "summary": "Attacker used a Tor exit node to brute-force a finance user's password, then logged on. Contained by IP block and password reset.",
+    "actions": [
+      "block_ip:185.220.101.33",
+      "reset_sessions:m.kapoor",
+      "disable_account:m.kapoor"
+    ]
+  },
+  {
+    "case_id": "HIST-0002",
+    "title": "Weekly Nessus scan flagged as port scan",
+    "verdict": "false_positive",
+    "fingerprint": "Port scan detected network service discovery discovery T1046 distinct destination ports scanning Port scanning authorized scanner vulnerability scan internal",
+    "summary": "Authorised IT Security scanner performing scheduled scan. Closed as false positive.",
+    "actions": []
+  },
+  {
+    "case_id": "HIST-0003",
+    "title": "Qualys authenticated scan during change window",
+    "verdict": "false_positive",
+    "fingerprint": "Port scan detected scanning T1046 discovery Port scanning change window maintenance SEC-SCAN-01 vulnerability scanner",
+    "summary": "Scan performed under approved change. False positive.",
+    "actions": []
+  },
+  {
+    "case_id": "HIST-0004",
+    "title": "Cobalt Strike beacon on engineering laptop",
+    "verdict": "true_positive",
+    "fingerprint": "Periodic outbound connections beaconing command-and-control T1071.001 T1059.001 powershell -enc highly periodic outbound connections C2 beaconing Suspicious process execution cobalt-strike",
+    "summary": "Encoded PowerShell stager established C2 beacon. Host isolated, domain sinkholed.",
+    "actions": ["block_domain:cdn-telemetry-sync.com", "isolate_host:WS-ENG-04"]
+  },
+  {
+    "case_id": "HIST-0005",
+    "title": "User mistyped password after password change",
+    "verdict": "false_positive",
+    "fingerprint": "Multiple failed logons failed authentications internal source user password change typo credential-access",
+    "summary": "Six failures from the user's own workstation right after a password change. Benign.",
+    "actions": []
+  },
+  {
+    "case_id": "HIST-0006",
+    "title": "Nightly backup upload to sanctioned cloud",
+    "verdict": "false_positive",
+    "fingerprint": "Large outbound data transfer exfiltration T1041 MB sent outbound backup svc-backup sanctioned cloud allowlisted",
+    "summary": "svc-backup uploading nightly backups to the approved cloud tenant.",
+    "actions": []
+  },
+  {
+    "case_id": "HIST-0007",
+    "title": "Data exfiltration to file-drop after C2",
+    "verdict": "true_positive",
+    "fingerprint": "Large outbound data transfer exfiltration T1041 C2 beaconing T1071.001 MB sent outbound rare domain exfiltration",
+    "summary": "Staged archive uploaded to attacker infrastructure after beaconing. Host isolated.",
+    "actions": [
+      "block_domain:files-transfer-drop.xyz",
+      "isolate_host:WS-FIN-02"
+    ]
+  },
+  {
+    "case_id": "HIST-0008",
+    "title": "Password spraying against multiple accounts",
+    "verdict": "true_positive",
+    "fingerprint": "Password spraying accounts targeted from one source T1110.003 credential-access brute force external",
+    "summary": "Low-and-slow spray from a VPS against 40 accounts. Source blocked.",
+    "actions": ["block_ip:147.45.47.77"]
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "description": "Curated local threat-intelligence feed for the SentinelCrew MVP (synthetic, for demonstration).",
+  "indicators": [
+    {
+      "indicator": "185.220.101.45",
+      "type": "ip",
+      "reputation": 0.92,
+      "tags": ["tor-exit", "brute-force", "credential-stuffing"],
+      "source": "local-feed",
+      "context": "Tor exit node repeatedly reported for SSH/RDP/OWA brute-force campaigns."
+    },
+    {
+      "indicator": "185.220.101.46",
+      "type": "ip",
+      "reputation": 0.88,
+      "tags": ["tor-exit"],
+      "source": "local-feed",
+      "context": "Tor exit node."
+    },
+    {
+      "indicator": "45.137.21.9",
+      "type": "ip",
+      "reputation": 0.9,
+      "tags": ["c2", "cobalt-strike"],
+      "source": "local-feed",
+      "context": "Cobalt Strike team-server observed in multiple intrusions."
+    },
+    {
+      "indicator": "update-cdn-sync.net",
+      "type": "domain",
+      "reputation": 0.95,
+      "tags": ["c2", "cobalt-strike", "exfiltration"],
+      "source": "local-feed",
+      "context": "Typosquatted CDN domain used as C2 and exfiltration endpoint."
+    },
+    {
+      "indicator": "files-transfer-drop.xyz",
+      "type": "domain",
+      "reputation": 0.85,
+      "tags": ["exfiltration"],
+      "source": "local-feed",
+      "context": "Anonymous file drop frequently used for data theft."
+    },
+    {
+      "indicator": "91.240.118.172",
+      "type": "ip",
+      "reputation": 0.8,
+      "tags": ["scanner", "botnet"],
+      "source": "local-feed",
+      "context": "Mass internet scanner (Mirai-like botnet)."
+    },
+    {
+      "indicator": "login-micros0ft-verify.com",
+      "type": "domain",
+      "reputation": 0.93,
+      "tags": ["phishing", "credential-harvesting"],
+      "source": "local-feed",
+      "context": "Credential-phishing site impersonating Microsoft 365."
+    },
+    {
+      "indicator": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8",
+      "type": "hash",
+      "reputation": 0.97,
+      "tags": ["cobalt-strike", "beacon", "malware"],
+      "source": "local-feed",
+      "context": "Cobalt Strike stager (PowerShell)."
+    },
+    {
+      "indicator": "147.45.47.50",
+      "type": "ip",
+      "reputation": 0.45,
+      "tags": ["hosting-provider"],
+      "source": "local-feed",
+      "context": "Low-reputation VPS range; occasionally abused."
+    }
+  ],
+  "allowlist": [
+    "microsoft.com",
+    "office365.com",
+    "office.com",
+    "windowsupdate.com",
+    "google.com",
+    "googleapis.com",
+    "github.com",
+    "salesforce.com",
+    "zoom.us",
+    "corp.local",
+    "backup.corp-cloud.com"
+  ]
+}

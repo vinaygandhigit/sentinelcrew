@@ -1,0 +1,16 @@
+{
+  "title": "Low-value noise",
+  "description": "A single mistyped password - closed at triage without spending agent time.",
+  "expected_verdict": "noise",
+  "alert": {
+    "alert_id": "ALR-1004",
+    "timestamp": "2026-10-09T09:15:25Z",
+    "source": "Windows Security Log",
+    "rule_name": "Single failed interactive logon",
+    "description": "One failed logon for a.sharma on WS-HR-03",
+    "severity": "info",
+    "user": "a.sharma",
+    "host": "WS-HR-03",
+    "src_ip": "10.0.1.53"
+  }
+}

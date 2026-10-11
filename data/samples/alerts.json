@@ -1,0 +1,59 @@
+[
+  {
+    "alert_id": "ALR-1001",
+    "timestamp": "2026-10-08T02:10:52Z",
+    "source": "Azure AD / VPN",
+    "rule_name": "Multiple failed logons followed by success",
+    "description": "46 failed VPN logons for j.mehta from 185.220.101.45 followed by a successful logon",
+    "severity": "high",
+    "user": "j.mehta",
+    "host": "VPN-GW-01",
+    "src_ip": "185.220.101.45"
+  },
+  {
+    "alert_id": "ALR-1002",
+    "timestamp": "2026-10-07T21:08:00Z",
+    "source": "Network IDS",
+    "rule_name": "Port scan detected",
+    "description": "Port scan from 10.0.5.20 against 10.0.2.15: 140 ports in 5 minutes",
+    "severity": "high",
+    "host": "SEC-SCAN-01",
+    "src_ip": "10.0.5.20",
+    "dst_ip": "10.0.2.15"
+  },
+  {
+    "alert_id": "ALR-1003",
+    "timestamp": "2026-10-09T10:45:32Z",
+    "source": "EDR",
+    "rule_name": "Periodic outbound connections to rare domain",
+    "description": "WS-ENG-12 made 41 connections to update-cdn-sync.net with fixed interval; encoded PowerShell parent",
+    "severity": "medium",
+    "user": "r.iyer",
+    "host": "WS-ENG-12",
+    "domain": "update-cdn-sync.net",
+    "dst_ip": "45.137.21.9",
+    "process": "powershell.exe -nop -w hidden -enc SQBFAFgA..."
+  },
+  {
+    "alert_id": "ALR-1004",
+    "timestamp": "2026-10-09T09:15:25Z",
+    "source": "Windows Security Log",
+    "rule_name": "Single failed interactive logon",
+    "description": "One failed logon for a.sharma on WS-HR-03",
+    "severity": "info",
+    "user": "a.sharma",
+    "host": "WS-HR-03",
+    "src_ip": "10.0.1.53"
+  },
+  {
+    "alert_id": "ALR-1005",
+    "timestamp": "2026-10-09T01:56:00Z",
+    "source": "DLP / Proxy",
+    "rule_name": "Large outbound data transfer",
+    "description": "SRV-BKP-01 uploaded ~380 MB to backup.corp-cloud.com outside business hours",
+    "severity": "high",
+    "user": "svc-backup",
+    "host": "SRV-BKP-01",
+    "domain": "backup.corp-cloud.com"
+  }
+]

@@ -1,0 +1,130 @@
+{
+  "source": "Subset of MITRE ATT&CK Enterprise (https://attack.mitre.org) relevant to the MVP scenarios.",
+  "techniques": [
+    {
+      "id": "T1110",
+      "name": "Brute Force",
+      "tactic": "credential-access",
+      "keywords": [
+        "brute",
+        "failed logon",
+        "failed login",
+        "multiple failed",
+        "credential-stuffing",
+        "brute-force"
+      ]
+    },
+    {
+      "id": "T1110.003",
+      "name": "Password Spraying",
+      "tactic": "credential-access",
+      "keywords": ["password spray", "spraying"]
+    },
+    {
+      "id": "T1078",
+      "name": "Valid Accounts",
+      "tactic": "initial-access",
+      "keywords": [
+        "followed by success",
+        "successful logon after",
+        "compromised account",
+        "valid account"
+      ]
+    },
+    {
+      "id": "T1003",
+      "name": "OS Credential Dumping",
+      "tactic": "credential-access",
+      "keywords": ["mimikatz", "lsass", "procdump", "credential dump"]
+    },
+    {
+      "id": "T1059",
+      "name": "Command and Scripting Interpreter",
+      "tactic": "execution",
+      "keywords": ["cmd.exe /c", "script interpreter"]
+    },
+    {
+      "id": "T1059.001",
+      "name": "PowerShell",
+      "tactic": "execution",
+      "keywords": ["powershell", "-enc", "encodedcommand"]
+    },
+    {
+      "id": "T1218.011",
+      "name": "Rundll32",
+      "tactic": "defense-evasion",
+      "keywords": ["rundll32"]
+    },
+    {
+      "id": "T1046",
+      "name": "Network Service Discovery",
+      "tactic": "discovery",
+      "keywords": [
+        "port scan",
+        "portscan",
+        "service discovery",
+        "scan detected"
+      ]
+    },
+    {
+      "id": "T1595",
+      "name": "Active Scanning",
+      "tactic": "reconnaissance",
+      "keywords": ["vulnerability scan", "active scanning", "scanner"]
+    },
+    {
+      "id": "T1021",
+      "name": "Remote Services",
+      "tactic": "lateral-movement",
+      "keywords": ["psexec", "remote service", "lateral"]
+    },
+    {
+      "id": "T1071.001",
+      "name": "Application Layer Protocol: Web Protocols",
+      "tactic": "command-and-control",
+      "keywords": [
+        "beacon",
+        "periodic outbound",
+        "c2",
+        "cobalt-strike",
+        "command and control"
+      ]
+    },
+    {
+      "id": "T1090.003",
+      "name": "Proxy: Multi-hop Proxy",
+      "tactic": "command-and-control",
+      "keywords": ["tor-exit", "tor exit"]
+    },
+    {
+      "id": "T1105",
+      "name": "Ingress Tool Transfer",
+      "tactic": "command-and-control",
+      "keywords": ["certutil -urlcache", "bitsadmin", "download cradle"]
+    },
+    {
+      "id": "T1041",
+      "name": "Exfiltration Over C2 Channel",
+      "tactic": "exfiltration",
+      "keywords": ["exfiltration", "large upload", "data transfer"]
+    },
+    {
+      "id": "T1567",
+      "name": "Exfiltration Over Web Service",
+      "tactic": "exfiltration",
+      "keywords": ["file drop", "cloud storage upload"]
+    },
+    {
+      "id": "T1566",
+      "name": "Phishing",
+      "tactic": "initial-access",
+      "keywords": ["phishing", "credential-harvesting", "malicious attachment"]
+    },
+    {
+      "id": "T1486",
+      "name": "Data Encrypted for Impact",
+      "tactic": "impact",
+      "keywords": ["ransom", "encrypted files", "vssadmin delete"]
+    }
+  ]
+}

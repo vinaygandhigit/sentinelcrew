@@ -1,0 +1,16 @@
+{
+  "title": "Noisy false positive: authorised vulnerability scanner",
+  "description": "IT Security's scheduled scan trips the IDS port-scan rule during an approved change.",
+  "expected_verdict": "false_positive",
+  "alert": {
+    "alert_id": "ALR-1002",
+    "timestamp": "2026-10-07T21:08:00Z",
+    "source": "Network IDS",
+    "rule_name": "Port scan detected",
+    "description": "Port scan from 10.0.5.20 against 10.0.2.15: 140 ports in 5 minutes",
+    "severity": "high",
+    "host": "SEC-SCAN-01",
+    "src_ip": "10.0.5.20",
+    "dst_ip": "10.0.2.15"
+  }
+}

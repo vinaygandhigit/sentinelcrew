@@ -1,0 +1,18 @@
+{
+  "title": "Malware beaconing + data exfiltration",
+  "description": "Macro-launched encoded PowerShell beacons to a C2 domain then exfiltrates ~260 MB.",
+  "expected_verdict": "true_positive",
+  "alert": {
+    "alert_id": "ALR-1003",
+    "timestamp": "2026-10-09T10:45:32Z",
+    "source": "EDR",
+    "rule_name": "Periodic outbound connections to rare domain",
+    "description": "WS-ENG-12 made 41 connections to update-cdn-sync.net with fixed interval; encoded PowerShell parent",
+    "severity": "medium",
+    "user": "r.iyer",
+    "host": "WS-ENG-12",
+    "domain": "update-cdn-sync.net",
+    "dst_ip": "45.137.21.9",
+    "process": "powershell.exe -nop -w hidden -enc SQBFAFgA..."
+  }
+}

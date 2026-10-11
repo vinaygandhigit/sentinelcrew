@@ -1,0 +1,434 @@
+{"event_id": "BASE-00053", "timestamp": "2026-10-01T08:04:00Z", "event_type": "auth", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00014", "timestamp": "2026-10-01T08:25:00Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00036", "timestamp": "2026-10-01T08:36:00Z", "event_type": "auth", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00001", "timestamp": "2026-10-01T08:39:00Z", "event_type": "auth", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00027", "timestamp": "2026-10-01T08:41:00Z", "event_type": "auth", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00056", "timestamp": "2026-10-01T08:49:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "outlook.exe"}
+{"event_id": "BASE-00057", "timestamp": "2026-10-01T08:49:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 568682}
+{"event_id": "BASE-00023", "timestamp": "2026-10-01T09:04:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "explorer.exe"}
+{"event_id": "BASE-00037", "timestamp": "2026-10-01T09:04:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00024", "timestamp": "2026-10-01T09:04:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 650725}
+{"event_id": "BASE-00038", "timestamp": "2026-10-01T09:04:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 891643}
+{"event_id": "BASE-00060", "timestamp": "2026-10-01T09:25:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "excel.exe"}
+{"event_id": "BASE-00061", "timestamp": "2026-10-01T09:25:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 637848}
+{"event_id": "BASE-00017", "timestamp": "2026-10-01T09:30:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "excel.exe"}
+{"event_id": "BASE-00018", "timestamp": "2026-10-01T09:30:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "www.google.com", "dst_port": 443, "bytes_out": 181534}
+{"event_id": "BASE-00030", "timestamp": "2026-10-01T09:39:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "teams.exe"}
+{"event_id": "BASE-00031", "timestamp": "2026-10-01T09:39:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "www.google.com", "dst_port": 443, "bytes_out": 476300}
+{"event_id": "BASE-00010", "timestamp": "2026-10-01T12:21:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "explorer.exe"}
+{"event_id": "BASE-00011", "timestamp": "2026-10-01T12:21:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 70517}
+{"event_id": "BASE-00045", "timestamp": "2026-10-01T12:54:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00046", "timestamp": "2026-10-01T12:54:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 479296}
+{"event_id": "BASE-00012", "timestamp": "2026-10-01T13:02:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "explorer.exe"}
+{"event_id": "BASE-00013", "timestamp": "2026-10-01T13:02:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "github.com", "dst_port": 443, "bytes_out": 425192}
+{"event_id": "BASE-00041", "timestamp": "2026-10-01T13:11:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00042", "timestamp": "2026-10-01T13:11:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 195973}
+{"event_id": "BASE-00049", "timestamp": "2026-10-01T13:18:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00050", "timestamp": "2026-10-01T13:18:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 772389}
+{"event_id": "BASE-00025", "timestamp": "2026-10-01T13:25:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "chrome.exe"}
+{"event_id": "BASE-00026", "timestamp": "2026-10-01T13:25:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 429263}
+{"event_id": "BASE-00051", "timestamp": "2026-10-01T13:26:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00052", "timestamp": "2026-10-01T13:26:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 276495}
+{"event_id": "BASE-00002", "timestamp": "2026-10-01T13:36:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "code.exe"}
+{"event_id": "BASE-00003", "timestamp": "2026-10-01T13:36:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "www.google.com", "dst_port": 443, "bytes_out": 814855}
+{"event_id": "BASE-00021", "timestamp": "2026-10-01T13:38:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00022", "timestamp": "2026-10-01T13:38:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "www.google.com", "dst_port": 443, "bytes_out": 576365}
+{"event_id": "BASE-00015", "timestamp": "2026-10-01T14:09:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "chrome.exe"}
+{"event_id": "BASE-00016", "timestamp": "2026-10-01T14:09:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "github.com", "dst_port": 443, "bytes_out": 625333}
+{"event_id": "BASE-00028", "timestamp": "2026-10-01T14:31:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "chrome.exe"}
+{"event_id": "BASE-00029", "timestamp": "2026-10-01T14:31:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "www.google.com", "dst_port": 443, "bytes_out": 208592}
+{"event_id": "BASE-00008", "timestamp": "2026-10-01T14:40:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00009", "timestamp": "2026-10-01T14:40:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "github.com", "dst_port": 443, "bytes_out": 116597}
+{"event_id": "BASE-00032", "timestamp": "2026-10-01T15:09:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "code.exe"}
+{"event_id": "BASE-00033", "timestamp": "2026-10-01T15:09:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "github.com", "dst_port": 443, "bytes_out": 15071}
+{"event_id": "BASE-00058", "timestamp": "2026-10-01T15:15:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00059", "timestamp": "2026-10-01T15:15:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 583472}
+{"event_id": "BASE-00019", "timestamp": "2026-10-01T15:17:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00043", "timestamp": "2026-10-01T15:17:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00020", "timestamp": "2026-10-01T15:17:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 481364}
+{"event_id": "BASE-00044", "timestamp": "2026-10-01T15:17:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 784619}
+{"event_id": "BASE-00006", "timestamp": "2026-10-01T15:28:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "teams.exe"}
+{"event_id": "BASE-00007", "timestamp": "2026-10-01T15:28:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "github.com", "dst_port": 443, "bytes_out": 412571}
+{"event_id": "BASE-00034", "timestamp": "2026-10-01T15:33:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "code.exe"}
+{"event_id": "BASE-00035", "timestamp": "2026-10-01T15:33:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "github.com", "dst_port": 443, "bytes_out": 455161}
+{"event_id": "BASE-00004", "timestamp": "2026-10-01T15:46:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "teams.exe"}
+{"event_id": "BASE-00005", "timestamp": "2026-10-01T15:46:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 667713}
+{"event_id": "BASE-00054", "timestamp": "2026-10-01T15:51:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "outlook.exe"}
+{"event_id": "BASE-00055", "timestamp": "2026-10-01T15:51:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 861811}
+{"event_id": "BASE-00039", "timestamp": "2026-10-01T16:17:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00040", "timestamp": "2026-10-01T16:17:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 191576}
+{"event_id": "BASE-00047", "timestamp": "2026-10-01T16:21:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "chrome.exe"}
+{"event_id": "BASE-00048", "timestamp": "2026-10-01T16:21:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 513272}
+{"event_id": "BASE-00106", "timestamp": "2026-10-02T08:12:00Z", "event_type": "auth", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00091", "timestamp": "2026-10-02T08:24:00Z", "event_type": "auth", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00098", "timestamp": "2026-10-02T08:30:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00099", "timestamp": "2026-10-02T08:30:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 884126}
+{"event_id": "BASE-00082", "timestamp": "2026-10-02T08:40:00Z", "event_type": "auth", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00062", "timestamp": "2026-10-02T08:45:00Z", "event_type": "auth", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00071", "timestamp": "2026-10-02T08:45:00Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00104", "timestamp": "2026-10-02T08:48:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00105", "timestamp": "2026-10-02T08:48:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 399184}
+{"event_id": "BASE-00113", "timestamp": "2026-10-02T09:09:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "explorer.exe"}
+{"event_id": "BASE-00114", "timestamp": "2026-10-02T09:09:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 532392}
+{"event_id": "BASE-00067", "timestamp": "2026-10-02T09:25:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00068", "timestamp": "2026-10-02T09:25:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "github.com", "dst_port": 443, "bytes_out": 691084}
+{"event_id": "BASE-00092", "timestamp": "2026-10-02T09:42:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00093", "timestamp": "2026-10-02T09:42:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 801638}
+{"event_id": "BASE-00078", "timestamp": "2026-10-02T10:29:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "code.exe"}
+{"event_id": "BASE-00079", "timestamp": "2026-10-02T10:29:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 168820}
+{"event_id": "BASE-00085", "timestamp": "2026-10-02T12:28:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "teams.exe"}
+{"event_id": "BASE-00109", "timestamp": "2026-10-02T12:28:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "explorer.exe"}
+{"event_id": "BASE-00086", "timestamp": "2026-10-02T12:28:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "zoom.us", "dst_port": 443, "bytes_out": 332439}
+{"event_id": "BASE-00110", "timestamp": "2026-10-02T12:28:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 374931}
+{"event_id": "BASE-00063", "timestamp": "2026-10-02T12:30:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "teams.exe"}
+{"event_id": "BASE-00064", "timestamp": "2026-10-02T12:30:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "www.google.com", "dst_port": 443, "bytes_out": 60673}
+{"event_id": "BASE-00111", "timestamp": "2026-10-02T12:50:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00112", "timestamp": "2026-10-02T12:50:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 610142}
+{"event_id": "BASE-00072", "timestamp": "2026-10-02T12:57:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "excel.exe"}
+{"event_id": "BASE-00073", "timestamp": "2026-10-02T12:57:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 452463}
+{"event_id": "BASE-00083", "timestamp": "2026-10-02T13:21:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "code.exe"}
+{"event_id": "BASE-00084", "timestamp": "2026-10-02T13:21:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "www.google.com", "dst_port": 443, "bytes_out": 674458}
+{"event_id": "BASE-00074", "timestamp": "2026-10-02T13:33:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00075", "timestamp": "2026-10-02T13:33:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "www.google.com", "dst_port": 443, "bytes_out": 234200}
+{"event_id": "BASE-00107", "timestamp": "2026-10-02T13:58:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "outlook.exe"}
+{"event_id": "BASE-00108", "timestamp": "2026-10-02T13:58:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 56790}
+{"event_id": "BASE-00065", "timestamp": "2026-10-02T14:14:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "excel.exe"}
+{"event_id": "BASE-00066", "timestamp": "2026-10-02T14:14:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "github.com", "dst_port": 443, "bytes_out": 400923}
+{"event_id": "BASE-00096", "timestamp": "2026-10-02T14:31:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "chrome.exe"}
+{"event_id": "BASE-00097", "timestamp": "2026-10-02T14:31:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 729749}
+{"event_id": "BASE-00069", "timestamp": "2026-10-02T14:36:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "explorer.exe"}
+{"event_id": "BASE-00070", "timestamp": "2026-10-02T14:36:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "zoom.us", "dst_port": 443, "bytes_out": 278471}
+{"event_id": "BASE-00094", "timestamp": "2026-10-02T14:51:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00095", "timestamp": "2026-10-02T14:51:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 854609}
+{"event_id": "BASE-00076", "timestamp": "2026-10-02T14:54:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00077", "timestamp": "2026-10-02T14:54:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 656695}
+{"event_id": "BASE-00080", "timestamp": "2026-10-02T14:57:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "excel.exe"}
+{"event_id": "BASE-00081", "timestamp": "2026-10-02T14:57:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 733544}
+{"event_id": "BASE-00087", "timestamp": "2026-10-02T15:24:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "excel.exe"}
+{"event_id": "BASE-00088", "timestamp": "2026-10-02T15:24:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "github.com", "dst_port": 443, "bytes_out": 238028}
+{"event_id": "BASE-00102", "timestamp": "2026-10-02T15:28:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00103", "timestamp": "2026-10-02T15:28:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 148318}
+{"event_id": "BASE-00100", "timestamp": "2026-10-02T16:26:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00101", "timestamp": "2026-10-02T16:26:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 554768}
+{"event_id": "BASE-00089", "timestamp": "2026-10-02T16:34:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "teams.exe"}
+{"event_id": "BASE-00090", "timestamp": "2026-10-02T16:34:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 610319}
+{"event_id": "BASE-00135", "timestamp": "2026-10-05T08:09:30Z", "event_type": "auth", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "status": "failure", "logon_type": "interactive"}
+{"event_id": "BASE-00136", "timestamp": "2026-10-05T08:10:00Z", "event_type": "auth", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00145", "timestamp": "2026-10-05T08:14:00Z", "event_type": "auth", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00154", "timestamp": "2026-10-05T08:19:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00155", "timestamp": "2026-10-05T08:19:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "www.google.com", "dst_port": 443, "bytes_out": 64072}
+{"event_id": "BASE-00160", "timestamp": "2026-10-05T08:35:00Z", "event_type": "auth", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00115", "timestamp": "2026-10-05T08:49:00Z", "event_type": "auth", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00124", "timestamp": "2026-10-05T08:50:00Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00150", "timestamp": "2026-10-05T08:53:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00151", "timestamp": "2026-10-05T08:53:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "www.google.com", "dst_port": 443, "bytes_out": 380435}
+{"event_id": "BASE-00118", "timestamp": "2026-10-05T09:02:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00119", "timestamp": "2026-10-05T09:02:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "www.google.com", "dst_port": 443, "bytes_out": 490543}
+{"event_id": "BASE-00120", "timestamp": "2026-10-05T09:35:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "explorer.exe"}
+{"event_id": "BASE-00121", "timestamp": "2026-10-05T09:35:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "zoom.us", "dst_port": 443, "bytes_out": 514668}
+{"event_id": "BASE-00141", "timestamp": "2026-10-05T09:36:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "code.exe"}
+{"event_id": "BASE-00142", "timestamp": "2026-10-05T09:36:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 607526}
+{"event_id": "BASE-00152", "timestamp": "2026-10-05T10:38:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00153", "timestamp": "2026-10-05T10:38:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 31037}
+{"event_id": "BASE-00146", "timestamp": "2026-10-05T11:07:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00147", "timestamp": "2026-10-05T11:07:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 498064}
+{"event_id": "BASE-00131", "timestamp": "2026-10-05T11:35:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "chrome.exe"}
+{"event_id": "BASE-00132", "timestamp": "2026-10-05T11:35:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 372224}
+{"event_id": "BASE-00163", "timestamp": "2026-10-05T12:48:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00164", "timestamp": "2026-10-05T12:48:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 806622}
+{"event_id": "BASE-00156", "timestamp": "2026-10-05T12:55:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00157", "timestamp": "2026-10-05T12:55:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 888187}
+{"event_id": "BASE-00143", "timestamp": "2026-10-05T13:19:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "outlook.exe"}
+{"event_id": "BASE-00144", "timestamp": "2026-10-05T13:19:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 453546}
+{"event_id": "BASE-00167", "timestamp": "2026-10-05T13:48:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "chrome.exe"}
+{"event_id": "BASE-00168", "timestamp": "2026-10-05T13:48:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 798359}
+{"event_id": "BASE-00158", "timestamp": "2026-10-05T13:52:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "excel.exe"}
+{"event_id": "BASE-00159", "timestamp": "2026-10-05T13:52:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 549418}
+{"event_id": "BASE-00139", "timestamp": "2026-10-05T14:05:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "outlook.exe"}
+{"event_id": "BASE-00140", "timestamp": "2026-10-05T14:05:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 84091}
+{"event_id": "BASE-00127", "timestamp": "2026-10-05T14:18:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "excel.exe"}
+{"event_id": "BASE-00128", "timestamp": "2026-10-05T14:18:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 749204}
+{"event_id": "BASE-00165", "timestamp": "2026-10-05T14:20:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00166", "timestamp": "2026-10-05T14:20:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 794814}
+{"event_id": "BASE-00116", "timestamp": "2026-10-05T14:22:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "code.exe"}
+{"event_id": "BASE-00117", "timestamp": "2026-10-05T14:22:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 312654}
+{"event_id": "BASE-00161", "timestamp": "2026-10-05T14:33:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "chrome.exe"}
+{"event_id": "BASE-00162", "timestamp": "2026-10-05T14:33:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 315932}
+{"event_id": "BASE-00148", "timestamp": "2026-10-05T14:40:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00149", "timestamp": "2026-10-05T14:40:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 79356}
+{"event_id": "BASE-00125", "timestamp": "2026-10-05T15:19:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "outlook.exe"}
+{"event_id": "BASE-00126", "timestamp": "2026-10-05T15:19:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 747392}
+{"event_id": "BASE-00169", "timestamp": "2026-10-05T15:25:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "chrome.exe"}
+{"event_id": "BASE-00170", "timestamp": "2026-10-05T15:25:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 841807}
+{"event_id": "BASE-00133", "timestamp": "2026-10-05T15:40:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "explorer.exe"}
+{"event_id": "BASE-00134", "timestamp": "2026-10-05T15:40:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 825116}
+{"event_id": "BASE-00129", "timestamp": "2026-10-05T15:47:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "excel.exe"}
+{"event_id": "BASE-00130", "timestamp": "2026-10-05T15:47:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "github.com", "dst_port": 443, "bytes_out": 790887}
+{"event_id": "BASE-00137", "timestamp": "2026-10-05T15:59:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "teams.exe"}
+{"event_id": "BASE-00138", "timestamp": "2026-10-05T15:59:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "www.google.com", "dst_port": 443, "bytes_out": 166545}
+{"event_id": "BASE-00122", "timestamp": "2026-10-05T16:50:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "excel.exe"}
+{"event_id": "BASE-00123", "timestamp": "2026-10-05T16:50:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 185785}
+{"event_id": "BASE-00171", "timestamp": "2026-10-06T08:27:00Z", "event_type": "auth", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00186", "timestamp": "2026-10-06T08:27:00Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00223", "timestamp": "2026-10-06T08:30:00Z", "event_type": "auth", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00203", "timestamp": "2026-10-06T08:33:00Z", "event_type": "auth", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00212", "timestamp": "2026-10-06T08:35:00Z", "event_type": "auth", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00234", "timestamp": "2026-10-06T08:57:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "explorer.exe"}
+{"event_id": "BASE-00235", "timestamp": "2026-10-06T08:57:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 60307}
+{"event_id": "BASE-00191", "timestamp": "2026-10-06T08:58:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "explorer.exe"}
+{"event_id": "BASE-00206", "timestamp": "2026-10-06T08:58:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "explorer.exe"}
+{"event_id": "BASE-00192", "timestamp": "2026-10-06T08:58:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 386605}
+{"event_id": "BASE-00207", "timestamp": "2026-10-06T08:58:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "zoom.us", "dst_port": 443, "bytes_out": 457111}
+{"event_id": "BASE-00176", "timestamp": "2026-10-06T09:09:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "excel.exe"}
+{"event_id": "BASE-00177", "timestamp": "2026-10-06T09:09:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "www.google.com", "dst_port": 443, "bytes_out": 94412}
+{"event_id": "BASE-00213", "timestamp": "2026-10-06T09:25:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "excel.exe"}
+{"event_id": "BASE-00214", "timestamp": "2026-10-06T09:25:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 708250}
+{"event_id": "BASE-00221", "timestamp": "2026-10-06T09:49:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00222", "timestamp": "2026-10-06T09:49:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 407193}
+{"event_id": "BASE-00217", "timestamp": "2026-10-06T09:54:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00218", "timestamp": "2026-10-06T09:54:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 241144}
+{"event_id": "BASE-00232", "timestamp": "2026-10-06T10:19:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "outlook.exe"}
+{"event_id": "BASE-00233", "timestamp": "2026-10-06T10:19:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 161269}
+{"event_id": "BASE-00230", "timestamp": "2026-10-06T10:46:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "outlook.exe"}
+{"event_id": "BASE-00231", "timestamp": "2026-10-06T10:46:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 802745}
+{"event_id": "BASE-00195", "timestamp": "2026-10-06T11:36:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "code.exe"}
+{"event_id": "BASE-00196", "timestamp": "2026-10-06T11:36:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 348630}
+{"event_id": "BASE-00172", "timestamp": "2026-10-06T12:34:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00173", "timestamp": "2026-10-06T12:34:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 522866}
+{"event_id": "BASE-00184", "timestamp": "2026-10-06T12:48:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00185", "timestamp": "2026-10-06T12:48:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 23360}
+{"event_id": "BASE-00187", "timestamp": "2026-10-06T13:11:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00228", "timestamp": "2026-10-06T13:11:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "chrome.exe"}
+{"event_id": "BASE-00188", "timestamp": "2026-10-06T13:11:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 750539}
+{"event_id": "BASE-00229", "timestamp": "2026-10-06T13:11:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 509896}
+{"event_id": "BASE-00226", "timestamp": "2026-10-06T13:42:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "excel.exe"}
+{"event_id": "BASE-00227", "timestamp": "2026-10-06T13:42:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 845425}
+{"event_id": "BASE-00210", "timestamp": "2026-10-06T13:43:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "code.exe"}
+{"event_id": "BASE-00211", "timestamp": "2026-10-06T13:43:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "zoom.us", "dst_port": 443, "bytes_out": 471850}
+{"event_id": "BASE-00224", "timestamp": "2026-10-06T13:51:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "outlook.exe"}
+{"event_id": "BASE-00225", "timestamp": "2026-10-06T13:51:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 866333}
+{"event_id": "BASE-00208", "timestamp": "2026-10-06T14:47:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "excel.exe"}
+{"event_id": "BASE-00209", "timestamp": "2026-10-06T14:47:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 338984}
+{"event_id": "BASE-00180", "timestamp": "2026-10-06T15:25:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00181", "timestamp": "2026-10-06T15:25:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 234854}
+{"event_id": "BASE-00204", "timestamp": "2026-10-06T15:28:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "excel.exe"}
+{"event_id": "BASE-00205", "timestamp": "2026-10-06T15:28:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 677296}
+{"event_id": "BASE-00219", "timestamp": "2026-10-06T15:30:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00220", "timestamp": "2026-10-06T15:30:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 173761}
+{"event_id": "BASE-00193", "timestamp": "2026-10-06T15:35:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00194", "timestamp": "2026-10-06T15:35:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 816941}
+{"event_id": "BASE-00215", "timestamp": "2026-10-06T15:58:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00216", "timestamp": "2026-10-06T15:58:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 35872}
+{"event_id": "BASE-00182", "timestamp": "2026-10-06T16:05:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "code.exe"}
+{"event_id": "BASE-00183", "timestamp": "2026-10-06T16:05:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 236362}
+{"event_id": "BASE-00199", "timestamp": "2026-10-06T16:10:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "code.exe"}
+{"event_id": "BASE-00200", "timestamp": "2026-10-06T16:10:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 732650}
+{"event_id": "BASE-00197", "timestamp": "2026-10-06T16:19:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "explorer.exe"}
+{"event_id": "BASE-00198", "timestamp": "2026-10-06T16:19:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "www.google.com", "dst_port": 443, "bytes_out": 110518}
+{"event_id": "BASE-00189", "timestamp": "2026-10-06T16:25:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "explorer.exe"}
+{"event_id": "BASE-00190", "timestamp": "2026-10-06T16:25:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "github.com", "dst_port": 443, "bytes_out": 297193}
+{"event_id": "BASE-00201", "timestamp": "2026-10-06T16:38:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "chrome.exe"}
+{"event_id": "BASE-00202", "timestamp": "2026-10-06T16:38:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 724875}
+{"event_id": "BASE-00178", "timestamp": "2026-10-06T16:46:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "code.exe"}
+{"event_id": "BASE-00179", "timestamp": "2026-10-06T16:46:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "zoom.us", "dst_port": 443, "bytes_out": 824565}
+{"event_id": "BASE-00174", "timestamp": "2026-10-06T16:47:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "explorer.exe"}
+{"event_id": "BASE-00175", "timestamp": "2026-10-06T16:47:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "www.google.com", "dst_port": 443, "bytes_out": 200724}
+{"event_id": "BASE-00245", "timestamp": "2026-10-07T08:13:00Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00236", "timestamp": "2026-10-07T08:15:00Z", "event_type": "auth", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00273", "timestamp": "2026-10-07T08:26:00Z", "event_type": "auth", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00290", "timestamp": "2026-10-07T08:27:00Z", "event_type": "auth", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00258", "timestamp": "2026-10-07T08:35:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00259", "timestamp": "2026-10-07T08:35:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 148618}
+{"event_id": "BASE-00299", "timestamp": "2026-10-07T08:45:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "explorer.exe"}
+{"event_id": "BASE-00300", "timestamp": "2026-10-07T08:45:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 653532}
+{"event_id": "BASE-00262", "timestamp": "2026-10-07T08:50:00Z", "event_type": "auth", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00301", "timestamp": "2026-10-07T08:55:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "code.exe"}
+{"event_id": "BASE-00302", "timestamp": "2026-10-07T08:55:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "zoom.us", "dst_port": 443, "bytes_out": 647252}
+{"event_id": "BASE-00254", "timestamp": "2026-10-07T09:03:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "explorer.exe"}
+{"event_id": "BASE-00295", "timestamp": "2026-10-07T09:03:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "code.exe"}
+{"event_id": "BASE-00255", "timestamp": "2026-10-07T09:03:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 797401}
+{"event_id": "BASE-00296", "timestamp": "2026-10-07T09:03:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 813517}
+{"event_id": "BASE-00265", "timestamp": "2026-10-07T09:05:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "excel.exe"}
+{"event_id": "BASE-00266", "timestamp": "2026-10-07T09:05:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 614852}
+{"event_id": "BASE-00291", "timestamp": "2026-10-07T09:19:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "excel.exe"}
+{"event_id": "BASE-00292", "timestamp": "2026-10-07T09:19:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 656045}
+{"event_id": "BASE-00282", "timestamp": "2026-10-07T09:25:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "chrome.exe"}
+{"event_id": "BASE-00283", "timestamp": "2026-10-07T09:25:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 196713}
+{"event_id": "BASE-00274", "timestamp": "2026-10-07T09:36:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "excel.exe"}
+{"event_id": "BASE-00275", "timestamp": "2026-10-07T09:36:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 784391}
+{"event_id": "BASE-00284", "timestamp": "2026-10-07T09:37:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00285", "timestamp": "2026-10-07T09:37:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 137286}
+{"event_id": "BASE-00297", "timestamp": "2026-10-07T09:50:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "outlook.exe"}
+{"event_id": "BASE-00298", "timestamp": "2026-10-07T09:50:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 744797}
+{"event_id": "BASE-00243", "timestamp": "2026-10-07T10:02:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00244", "timestamp": "2026-10-07T10:02:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "github.com", "dst_port": 443, "bytes_out": 750002}
+{"event_id": "BASE-00267", "timestamp": "2026-10-07T10:32:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "explorer.exe"}
+{"event_id": "BASE-00268", "timestamp": "2026-10-07T10:32:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "zoom.us", "dst_port": 443, "bytes_out": 404253}
+{"event_id": "BASE-00248", "timestamp": "2026-10-07T10:49:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "code.exe"}
+{"event_id": "BASE-00249", "timestamp": "2026-10-07T10:49:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "github.com", "dst_port": 443, "bytes_out": 302270}
+{"event_id": "BASE-00237", "timestamp": "2026-10-07T10:58:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00238", "timestamp": "2026-10-07T10:58:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 768208}
+{"event_id": "BASE-00250", "timestamp": "2026-10-07T11:03:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00251", "timestamp": "2026-10-07T11:03:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 268958}
+{"event_id": "BASE-00278", "timestamp": "2026-10-07T11:20:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00279", "timestamp": "2026-10-07T11:20:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 676476}
+{"event_id": "BASE-00276", "timestamp": "2026-10-07T11:49:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00288", "timestamp": "2026-10-07T11:49:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00277", "timestamp": "2026-10-07T11:49:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 276273}
+{"event_id": "BASE-00289", "timestamp": "2026-10-07T11:49:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 703396}
+{"event_id": "BASE-00252", "timestamp": "2026-10-07T11:53:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00253", "timestamp": "2026-10-07T11:53:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "github.com", "dst_port": 443, "bytes_out": 724220}
+{"event_id": "BASE-00260", "timestamp": "2026-10-07T11:57:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "excel.exe"}
+{"event_id": "BASE-00261", "timestamp": "2026-10-07T11:57:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 676671}
+{"event_id": "BASE-00239", "timestamp": "2026-10-07T12:43:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "excel.exe"}
+{"event_id": "BASE-00240", "timestamp": "2026-10-07T12:43:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "zoom.us", "dst_port": 443, "bytes_out": 552608}
+{"event_id": "BASE-00286", "timestamp": "2026-10-07T12:52:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "chrome.exe"}
+{"event_id": "BASE-00287", "timestamp": "2026-10-07T12:52:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "www.google.com", "dst_port": 443, "bytes_out": 530769}
+{"event_id": "BASE-00293", "timestamp": "2026-10-07T12:54:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "excel.exe"}
+{"event_id": "BASE-00294", "timestamp": "2026-10-07T12:54:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 109315}
+{"event_id": "BASE-00241", "timestamp": "2026-10-07T13:12:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "excel.exe"}
+{"event_id": "BASE-00242", "timestamp": "2026-10-07T13:12:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 97019}
+{"event_id": "BASE-00256", "timestamp": "2026-10-07T13:19:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00257", "timestamp": "2026-10-07T13:19:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 290872}
+{"event_id": "BASE-00280", "timestamp": "2026-10-07T13:21:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00281", "timestamp": "2026-10-07T13:21:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 264644}
+{"event_id": "BASE-00271", "timestamp": "2026-10-07T13:23:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "excel.exe"}
+{"event_id": "BASE-00272", "timestamp": "2026-10-07T13:23:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "zoom.us", "dst_port": 443, "bytes_out": 650916}
+{"event_id": "BASE-00246", "timestamp": "2026-10-07T13:56:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "chrome.exe"}
+{"event_id": "BASE-00247", "timestamp": "2026-10-07T13:56:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "www.google.com", "dst_port": 443, "bytes_out": 107311}
+{"event_id": "BASE-00263", "timestamp": "2026-10-07T14:02:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "excel.exe"}
+{"event_id": "BASE-00264", "timestamp": "2026-10-07T14:02:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "zoom.us", "dst_port": 443, "bytes_out": 692611}
+{"event_id": "BASE-00269", "timestamp": "2026-10-07T15:12:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "teams.exe"}
+{"event_id": "BASE-00270", "timestamp": "2026-10-07T15:12:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "www.google.com", "dst_port": 443, "bytes_out": 834795}
+{"event_id": "BASE-00303", "timestamp": "2026-10-08T08:01:00Z", "event_type": "auth", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00327", "timestamp": "2026-10-08T08:16:00Z", "event_type": "auth", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00351", "timestamp": "2026-10-08T08:19:00Z", "event_type": "auth", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00316", "timestamp": "2026-10-08T08:27:00Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00319", "timestamp": "2026-10-08T08:34:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "explorer.exe"}
+{"event_id": "BASE-00320", "timestamp": "2026-10-08T08:34:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 194495}
+{"event_id": "BASE-00336", "timestamp": "2026-10-08T08:37:00Z", "event_type": "auth", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00325", "timestamp": "2026-10-08T09:07:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "chrome.exe"}
+{"event_id": "BASE-00326", "timestamp": "2026-10-08T09:07:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 671040}
+{"event_id": "BASE-00337", "timestamp": "2026-10-08T10:16:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00338", "timestamp": "2026-10-08T10:16:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 704594}
+{"event_id": "BASE-00334", "timestamp": "2026-10-08T10:19:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "code.exe"}
+{"event_id": "BASE-00335", "timestamp": "2026-10-08T10:19:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "zoom.us", "dst_port": 443, "bytes_out": 280027}
+{"event_id": "BASE-00306", "timestamp": "2026-10-08T11:01:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00307", "timestamp": "2026-10-08T11:01:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "github.com", "dst_port": 443, "bytes_out": 625012}
+{"event_id": "BASE-00356", "timestamp": "2026-10-08T11:18:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "explorer.exe"}
+{"event_id": "BASE-00357", "timestamp": "2026-10-08T11:18:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 648418}
+{"event_id": "BASE-00332", "timestamp": "2026-10-08T11:20:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "chrome.exe"}
+{"event_id": "BASE-00333", "timestamp": "2026-10-08T11:20:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 819071}
+{"event_id": "BASE-00323", "timestamp": "2026-10-08T11:26:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00324", "timestamp": "2026-10-08T11:26:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 187405}
+{"event_id": "BASE-00362", "timestamp": "2026-10-08T11:32:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00363", "timestamp": "2026-10-08T11:32:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 660168}
+{"event_id": "BASE-00358", "timestamp": "2026-10-08T11:43:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00359", "timestamp": "2026-10-08T11:43:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 889877}
+{"event_id": "BASE-00354", "timestamp": "2026-10-08T11:57:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "excel.exe"}
+{"event_id": "BASE-00355", "timestamp": "2026-10-08T11:57:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 154341}
+{"event_id": "BASE-00321", "timestamp": "2026-10-08T11:58:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00322", "timestamp": "2026-10-08T11:58:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 618895}
+{"event_id": "BASE-00364", "timestamp": "2026-10-08T12:11:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "outlook.exe"}
+{"event_id": "BASE-00365", "timestamp": "2026-10-08T12:11:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 114764}
+{"event_id": "BASE-00317", "timestamp": "2026-10-08T12:20:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "explorer.exe"}
+{"event_id": "BASE-00318", "timestamp": "2026-10-08T12:20:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 246932}
+{"event_id": "BASE-00352", "timestamp": "2026-10-08T12:22:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "code.exe"}
+{"event_id": "BASE-00353", "timestamp": "2026-10-08T12:22:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "zoom.us", "dst_port": 443, "bytes_out": 554828}
+{"event_id": "BASE-00314", "timestamp": "2026-10-08T12:38:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "code.exe"}
+{"event_id": "BASE-00366", "timestamp": "2026-10-08T12:38:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00315", "timestamp": "2026-10-08T12:38:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 107075}
+{"event_id": "BASE-00367", "timestamp": "2026-10-08T12:38:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 661947}
+{"event_id": "BASE-00330", "timestamp": "2026-10-08T12:49:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "excel.exe"}
+{"event_id": "BASE-00331", "timestamp": "2026-10-08T12:49:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 117756}
+{"event_id": "BASE-00349", "timestamp": "2026-10-08T13:36:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00350", "timestamp": "2026-10-08T13:36:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 560897}
+{"event_id": "BASE-00341", "timestamp": "2026-10-08T13:47:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00342", "timestamp": "2026-10-08T13:47:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 39473}
+{"event_id": "BASE-00328", "timestamp": "2026-10-08T13:48:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "teams.exe"}
+{"event_id": "BASE-00329", "timestamp": "2026-10-08T13:48:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "zoom.us", "dst_port": 443, "bytes_out": 235351}
+{"event_id": "BASE-00308", "timestamp": "2026-10-08T14:09:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "teams.exe"}
+{"event_id": "BASE-00309", "timestamp": "2026-10-08T14:09:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "github.com", "dst_port": 443, "bytes_out": 324835}
+{"event_id": "BASE-00312", "timestamp": "2026-10-08T14:35:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "teams.exe"}
+{"event_id": "BASE-00313", "timestamp": "2026-10-08T14:35:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "www.google.com", "dst_port": 443, "bytes_out": 35232}
+{"event_id": "BASE-00304", "timestamp": "2026-10-08T14:42:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "outlook.exe"}
+{"event_id": "BASE-00305", "timestamp": "2026-10-08T14:42:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "zoom.us", "dst_port": 443, "bytes_out": 864121}
+{"event_id": "BASE-00339", "timestamp": "2026-10-08T14:55:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00340", "timestamp": "2026-10-08T14:55:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 425590}
+{"event_id": "BASE-00345", "timestamp": "2026-10-08T14:56:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00346", "timestamp": "2026-10-08T14:56:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "www.google.com", "dst_port": 443, "bytes_out": 504657}
+{"event_id": "BASE-00343", "timestamp": "2026-10-08T15:50:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "outlook.exe"}
+{"event_id": "BASE-00344", "timestamp": "2026-10-08T15:50:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 669511}
+{"event_id": "BASE-00360", "timestamp": "2026-10-08T15:51:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "code.exe"}
+{"event_id": "BASE-00361", "timestamp": "2026-10-08T15:51:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 240432}
+{"event_id": "BASE-00347", "timestamp": "2026-10-08T15:59:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00348", "timestamp": "2026-10-08T15:59:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 313938}
+{"event_id": "BASE-00310", "timestamp": "2026-10-08T16:20:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "code.exe"}
+{"event_id": "BASE-00311", "timestamp": "2026-10-08T16:20:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 850474}
+{"event_id": "BASE-00368", "timestamp": "2026-10-09T08:02:00Z", "event_type": "auth", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00386", "timestamp": "2026-10-09T08:17:00Z", "event_type": "auth", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00401", "timestamp": "2026-10-09T08:40:00Z", "event_type": "auth", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00377", "timestamp": "2026-10-09T08:43:00Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00418", "timestamp": "2026-10-09T08:43:00Z", "event_type": "auth", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "status": "success", "logon_type": "interactive"}
+{"event_id": "BASE-00389", "timestamp": "2026-10-09T09:20:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "chrome.exe"}
+{"event_id": "BASE-00390", "timestamp": "2026-10-09T09:20:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 214820}
+{"event_id": "BASE-00395", "timestamp": "2026-10-09T09:38:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "explorer.exe"}
+{"event_id": "BASE-00396", "timestamp": "2026-10-09T09:38:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "www.google.com", "dst_port": 443, "bytes_out": 103443}
+{"event_id": "BASE-00419", "timestamp": "2026-10-09T09:55:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "code.exe"}
+{"event_id": "BASE-00420", "timestamp": "2026-10-09T09:55:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 387360}
+{"event_id": "BASE-00369", "timestamp": "2026-10-09T09:56:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "explorer.exe"}
+{"event_id": "BASE-00370", "timestamp": "2026-10-09T09:56:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "www.google.com", "dst_port": 443, "bytes_out": 203801}
+{"event_id": "BASE-00412", "timestamp": "2026-10-09T10:18:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00413", "timestamp": "2026-10-09T10:18:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 551354}
+{"event_id": "BASE-00431", "timestamp": "2026-10-09T10:22:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "explorer.exe"}
+{"event_id": "BASE-00432", "timestamp": "2026-10-09T10:22:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "github.com", "dst_port": 443, "bytes_out": 255586}
+{"event_id": "BASE-00387", "timestamp": "2026-10-09T10:33:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "chrome.exe"}
+{"event_id": "BASE-00388", "timestamp": "2026-10-09T10:33:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 301577}
+{"event_id": "BASE-00393", "timestamp": "2026-10-09T10:43:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "chrome.exe"}
+{"event_id": "BASE-00394", "timestamp": "2026-10-09T10:43:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "www.google.com", "dst_port": 443, "bytes_out": 240276}
+{"event_id": "BASE-00429", "timestamp": "2026-10-09T11:05:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "excel.exe"}
+{"event_id": "BASE-00430", "timestamp": "2026-10-09T11:05:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "zoom.us", "dst_port": 443, "bytes_out": 756088}
+{"event_id": "BASE-00427", "timestamp": "2026-10-09T11:26:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00428", "timestamp": "2026-10-09T11:26:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 838739}
+{"event_id": "BASE-00423", "timestamp": "2026-10-09T11:28:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "excel.exe"}
+{"event_id": "BASE-00424", "timestamp": "2026-10-09T11:28:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 282181}
+{"event_id": "BASE-00414", "timestamp": "2026-10-09T11:35:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "excel.exe"}
+{"event_id": "BASE-00415", "timestamp": "2026-10-09T11:35:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 137388}
+{"event_id": "BASE-00373", "timestamp": "2026-10-09T11:37:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "explorer.exe"}
+{"event_id": "BASE-00374", "timestamp": "2026-10-09T11:37:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 893119}
+{"event_id": "BASE-00384", "timestamp": "2026-10-09T11:41:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "code.exe"}
+{"event_id": "BASE-00385", "timestamp": "2026-10-09T11:41:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 832421}
+{"event_id": "BASE-00433", "timestamp": "2026-10-09T11:46:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "teams.exe"}
+{"event_id": "BASE-00434", "timestamp": "2026-10-09T11:46:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "zoom.us", "dst_port": 443, "bytes_out": 639453}
+{"event_id": "BASE-00378", "timestamp": "2026-10-09T11:51:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "code.exe"}
+{"event_id": "BASE-00379", "timestamp": "2026-10-09T11:51:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 549319}
+{"event_id": "BASE-00408", "timestamp": "2026-10-09T11:59:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "chrome.exe"}
+{"event_id": "BASE-00409", "timestamp": "2026-10-09T11:59:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "zoom.us", "dst_port": 443, "bytes_out": 586849}
+{"event_id": "BASE-00402", "timestamp": "2026-10-09T12:14:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00403", "timestamp": "2026-10-09T12:14:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "login.salesforce.com", "dst_port": 443, "bytes_out": 27084}
+{"event_id": "BASE-00371", "timestamp": "2026-10-09T12:25:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "excel.exe"}
+{"event_id": "BASE-00404", "timestamp": "2026-10-09T12:25:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00372", "timestamp": "2026-10-09T12:25:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "zoom.us", "dst_port": 443, "bytes_out": 685454}
+{"event_id": "BASE-00405", "timestamp": "2026-10-09T12:25:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "www.google.com", "dst_port": 443, "bytes_out": 291099}
+{"event_id": "BASE-00416", "timestamp": "2026-10-09T12:26:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "explorer.exe"}
+{"event_id": "BASE-00417", "timestamp": "2026-10-09T12:26:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 462029}
+{"event_id": "BASE-00397", "timestamp": "2026-10-09T12:53:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "outlook.exe"}
+{"event_id": "BASE-00398", "timestamp": "2026-10-09T12:53:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "github.com", "dst_port": 443, "bytes_out": 758255}
+{"event_id": "BASE-00406", "timestamp": "2026-10-09T13:00:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "teams.exe"}
+{"event_id": "BASE-00407", "timestamp": "2026-10-09T13:00:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 724144}
+{"event_id": "BASE-00382", "timestamp": "2026-10-09T13:12:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "teams.exe"}
+{"event_id": "BASE-00383", "timestamp": "2026-10-09T13:12:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "zoom.us", "dst_port": 443, "bytes_out": 140786}
+{"event_id": "BASE-00425", "timestamp": "2026-10-09T13:28:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "code.exe"}
+{"event_id": "BASE-00426", "timestamp": "2026-10-09T13:28:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "www.google.com", "dst_port": 443, "bytes_out": 796218}
+{"event_id": "BASE-00399", "timestamp": "2026-10-09T13:42:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "teams.exe"}
+{"event_id": "BASE-00400", "timestamp": "2026-10-09T13:42:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 178059}
+{"event_id": "BASE-00380", "timestamp": "2026-10-09T14:06:00Z", "event_type": "process", "user": "a.sharma", "host": "WS-HR-03", "process": "chrome.exe"}
+{"event_id": "BASE-00381", "timestamp": "2026-10-09T14:06:05Z", "event_type": "network", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "domain": "www.google.com", "dst_port": 443, "bytes_out": 72941}
+{"event_id": "BASE-00391", "timestamp": "2026-10-09T14:49:00Z", "event_type": "process", "user": "r.iyer", "host": "WS-ENG-12", "process": "explorer.exe"}
+{"event_id": "BASE-00392", "timestamp": "2026-10-09T14:49:05Z", "event_type": "network", "user": "r.iyer", "host": "WS-ENG-12", "src_ip": "10.0.3.12", "domain": "github.com", "dst_port": 443, "bytes_out": 774372}
+{"event_id": "BASE-00421", "timestamp": "2026-10-09T15:30:00Z", "event_type": "process", "user": "p.nair", "host": "SRV-WEB-01", "process": "chrome.exe"}
+{"event_id": "BASE-00422", "timestamp": "2026-10-09T15:30:05Z", "event_type": "network", "user": "p.nair", "host": "SRV-WEB-01", "src_ip": "10.0.2.15", "domain": "zoom.us", "dst_port": 443, "bytes_out": 642810}
+{"event_id": "BASE-00410", "timestamp": "2026-10-09T16:09:00Z", "event_type": "process", "user": "k.rao", "host": "WS-SAL-21", "process": "code.exe"}
+{"event_id": "BASE-00411", "timestamp": "2026-10-09T16:09:05Z", "event_type": "network", "user": "k.rao", "host": "WS-SAL-21", "src_ip": "10.0.1.81", "domain": "github.com", "dst_port": 443, "bytes_out": 860922}
+{"event_id": "BASE-00375", "timestamp": "2026-10-09T16:13:00Z", "event_type": "process", "user": "j.mehta", "host": "WS-FIN-07", "process": "chrome.exe"}
+{"event_id": "BASE-00376", "timestamp": "2026-10-09T16:13:05Z", "event_type": "network", "user": "j.mehta", "host": "WS-FIN-07", "src_ip": "10.0.1.37", "domain": "outlook.office365.com", "dst_port": 443, "bytes_out": 147559}

@@ -1,0 +1,3 @@
+# Runtime - intentionally minimal (LLM, HTTP, storage and ML are implemented on the standard library + NumPy)
+numpy>=1.24
+

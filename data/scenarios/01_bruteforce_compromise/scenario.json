@@ -1,0 +1,16 @@
+{
+  "title": "Brute-force -> account compromise",
+  "description": "Off-hours VPN brute-force from a Tor exit node succeeds against a finance user.",
+  "expected_verdict": "true_positive",
+  "alert": {
+    "alert_id": "ALR-1001",
+    "timestamp": "2026-10-08T02:10:52Z",
+    "source": "Azure AD / VPN",
+    "rule_name": "Multiple failed logons followed by success",
+    "description": "46 failed VPN logons for j.mehta from 185.220.101.45 followed by a successful logon",
+    "severity": "high",
+    "user": "j.mehta",
+    "host": "VPN-GW-01",
+    "src_ip": "185.220.101.45"
+  }
+}

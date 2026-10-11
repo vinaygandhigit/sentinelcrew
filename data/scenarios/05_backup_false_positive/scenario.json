@@ -1,0 +1,16 @@
+{
+  "title": "Off-hours bulk upload by backup service",
+  "description": "Looks like exfiltration, but it is the nightly backup to a sanctioned cloud tenant.",
+  "expected_verdict": "false_positive",
+  "alert": {
+    "alert_id": "ALR-1005",
+    "timestamp": "2026-10-09T01:56:00Z",
+    "source": "DLP / Proxy",
+    "rule_name": "Large outbound data transfer",
+    "description": "SRV-BKP-01 uploaded ~380 MB to backup.corp-cloud.com outside business hours",
+    "severity": "high",
+    "user": "svc-backup",
+    "host": "SRV-BKP-01",
+    "domain": "backup.corp-cloud.com"
+  }
+}

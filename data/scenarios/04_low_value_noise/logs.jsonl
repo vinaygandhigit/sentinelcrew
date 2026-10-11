@@ -1,0 +1,2 @@
+{"event_id": "S4-00001", "timestamp": "2026-10-09T09:15:00Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "failure", "logon_type": "interactive"}
+{"event_id": "S4-00002", "timestamp": "2026-10-09T09:15:20Z", "event_type": "auth", "user": "a.sharma", "host": "WS-HR-03", "src_ip": "10.0.1.53", "status": "success", "logon_type": "interactive"}
