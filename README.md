@@ -17,7 +17,7 @@ What makes it different is **debate before escalation**. Before the crew acts on
 
 To reproduce the table, run `python -m sentinelcrew evaluate`.
 
-Demo video: _add YouTube link_. Hosted demo: _add link if hosted_. Technical design document: [`docs/technical_design.md`](docs/technical_design.md) (also available as a Word document).
+Demo video: [YouTube](https://youtu.be/-eZUFSH03KU). Technical design document: [`docs/technical_design.md`](docs/technical_design.md) (also available as a Word document).
 
 ---
 
