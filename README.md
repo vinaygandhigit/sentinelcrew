@@ -2,8 +2,6 @@
 
 **Track:** AI / Cybersecurity (Multi-Agent Systems). Replace this with the exact track name from the competition brief.
 
-![tests](https://img.shields.io/badge/tests-178passing-2e7d32) ![coverage](https://img.shields.io/badge/coverage-99-2e7d32) ![python](https://img.shields.io/badge/python-3.10%2B-1f6feb) ![llm](https://img.shields.io/badge/LLM-GeminiClaude-6f42c1)
-
 SentinelCrew is a team of AI agents that works a security alert the way a good SOC shift does. It triages the alert, investigates, enriches it with threat intel, checks how similar cases ended in the past, argues about the verdict, contains the threat, and writes the report. A human approves anything high-risk.
 
 What makes it different is **debate before escalation**. Before the crew acts on a verdict, a Critic agent tries to prove it wrong. It raises benign explanations, such as "is this our authorised scanner?", "was there an approved change?", or "is this the nightly backup?", and settles each one against real data, never opinion. False positives get closed before they reach an analyst, and real attacks come out of the debate with more confidence than they went in.
