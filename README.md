@@ -59,7 +59,7 @@ The design principle is that **the LLM proposes and the tools verify**. Every nu
 You need Python 3.10 or newer. Docker is not required, and the only runtime dependency is NumPy. The commands below use **PowerShell** (the default terminal in Windows 11 and VS Code). Run the clone command from the parent folder where you want the project, then run the remaining commands from the cloned project directory:
 
 ```powershell
-git clone https://github.com/<you>/sentinelcrew.git
+git clone https://github.com/vinaygandhigit/sentinelcrew
 Set-Location sentinelcrew
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
